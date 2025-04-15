@@ -23,18 +23,13 @@
 <details><summary>Table of Contents</summary>
 
 - [📍 Overview](#-overview)
-- [👾 Features](#-features)
 - [📁 Project Structure](#-project-structure)
   - [📂 Project Index](#-project-index)
 - [🚀 Getting Started](#-getting-started)
   - [☑️ Prerequisites](#-prerequisites)
   - [⚙️ Installation](#-installation)
   - [🤖 Usage](#🤖-usage)
-  - [🧪 Testing](#🧪-testing)
-- [📌 Project Roadmap](#-project-roadmap)
 - [🔰 Contributing](#-contributing)
-- [🎗 License](#-license)
-- [🙌 Acknowledgments](#-acknowledgments)
 
 </details>
 <hr>
@@ -42,12 +37,6 @@
 ## 📍 Overview
 
 <code>It is an API for goverment app on React Native that as made by film "Law abiding citizen" ;)</code>
-
----
-
-## 👾 Features
-
-<code>❯ REPLACE-ME</code>
 
 ---
 
@@ -255,24 +244,6 @@ Run ApiForGovermentApp using the following command:
 ```sh
 ❯ dotnet run
 ```
-
-
-### 🧪 Testing
-Run the test suite using the following command:
-**Using `nuget`** &nbsp; [<img align="center" src="https://img.shields.io/badge/C%23-239120.svg?style={badge_style}&logo=c-sharp&logoColor=white" />](https://docs.microsoft.com/en-us/dotnet/csharp/)
-
-```sh
-❯ dotnet test
-```
-
-
----
-## 📌 Project Roadmap
-
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
-
 ---
 
 ## 🔰 Contributing
@@ -315,17 +286,3 @@ Run the test suite using the following command:
    </a>
 </p>
 </details>
-
----
-
-## 🎗 License
-
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
-## 🙌 Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
-
----

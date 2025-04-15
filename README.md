@@ -41,7 +41,7 @@
 
 ## 📍 Overview
 
-<code>❯ REPLACE-ME</code>
+<code>It is an API for goverment app on React Native that as made by film "Law abiding citizen" ;)</code>
 
 ---
 

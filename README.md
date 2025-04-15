@@ -1,171 +1,331 @@
-{
-"event": "Configuration file loaded: /home/adminuser/venv/lib/python3.11/site-packages/readmeai/config/settings/ignore_list.toml",
-"level": "info",
-"logger": "readmeai.config.settings",
-"timestamp": "2025-04-15T09:57:20.284770Z",
-"filename": "settings.py",
-"func_name": "_load_settings",
-"lineno": 276
-}
-{
-"event": "Configuration file loaded: /home/adminuser/venv/lib/python3.11/site-packages/readmeai/config/settings/languages.toml",
-"level": "info",
-"logger": "readmeai.config.settings",
-"timestamp": "2025-04-15T09:57:20.303044Z",
-"filename": "settings.py",
-"func_name": "_load_settings",
-"lineno": 276
-}
-{
-"event": "Configuration file loaded: /home/adminuser/venv/lib/python3.11/site-packages/readmeai/config/settings/parsers.toml",
-"level": "info",
-"logger": "readmeai.config.settings",
-"timestamp": "2025-04-15T09:57:20.315097Z",
-"filename": "settings.py",
-"func_name": "_load_settings",
-"lineno": 276
-}
-{
-"event": "Configuration file loaded: /home/adminuser/venv/lib/python3.11/site-packages/readmeai/config/settings/prompts.toml",
-"level": "info",
-"logger": "readmeai.config.settings",
-"timestamp": "2025-04-15T09:57:20.324546Z",
-"filename": "settings.py",
-"func_name": "_load_settings",
-"lineno": 276
-}
-{
-"event": "Configuration file loaded: /home/adminuser/venv/lib/python3.11/site-packages/readmeai/config/settings/tool_config.toml",
-"level": "info",
-"logger": "readmeai.config.settings",
-"timestamp": "2025-04-15T09:57:20.338567Z",
-"filename": "settings.py",
-"func_name": "_load_settings",
-"lineno": 276
-}
-{
-"event": "Configuration file loaded: /home/adminuser/venv/lib/python3.11/site-packages/readmeai/config/settings/tooling.toml",
-"level": "info",
-"logger": "readmeai.config.settings",
-"timestamp": "2025-04-15T09:57:20.350163Z",
-"filename": "settings.py",
-"func_name": "_load_settings",
-"lineno": 276
-}
-{
-"event": "Pydantic settings: dict_keys(['config', 'ignore_list', 'languages', 'parsers', 'prompts', 'tool_config', 'tooling'])",
-"level": "info",
-"logger": "readmeai.cli.main",
-"timestamp": "2025-04-15T09:57:20.358516Z",
-"filename": "main.py",
-"func_name": "main",
-"lineno": 86
-}
-{
-"event": "Repository settings: repository='https://github.com/LevKosyk/ApiForGovermentApp' full_name='LevKosyk/ApiForGovermentApp' host_domain='github.com' host='github' name='ApiForGovermentApp'",
-"level": "info",
-"logger": "readmeai.cli.main",
-"timestamp": "2025-04-15T09:57:20.360025Z",
-"filename": "main.py",
-"func_name": "main",
-"lineno": 87
-}
-{
-"event": "LLM API settings: api='OPENAI' base_url='https://api.openai.com/v1/chat/completions' context_window=3900 encoder='cl100k_base' host_name=Url('https://api.openai.com/') localhost=Url('http://localhost:11434/') model='gpt-3.5-turbo' path='v1/chat/completions' temperature=0.1 tokens=699 top_p=0.9",
-"level": "info",
-"logger": "readmeai.cli.main",
-"timestamp": "2025-04-15T09:57:20.360246Z",
-"filename": "main.py",
-"func_name": "main",
-"lineno": 88
-}
-{
-"event": "Total files analyzed: 19",
-"level": "info",
-"logger": "readmeai.__main__",
-"timestamp": "2025-04-15T09:57:20.881675Z",
-"filename": "__main__.py",
-"func_name": "log_repository_context",
-"lineno": 102
-}
-{
-"event": "Metadata extracted: {'cicd': {}, 'containers': {}, 'documentation': {}, 'package_managers': {'nuget': 'ApiForGovermentApp/ApiForGovermentApp.csproj'}}",
-"level": "info",
-"logger": "readmeai.__main__",
-"timestamp": "2025-04-15T09:57:20.881933Z",
-"filename": "__main__.py",
-"func_name": "log_repository_context",
-"lineno": 103
-}
-{
-"event": "Dependencies: ['nuget', 'apiforgovermentapp.http', 'launchsettings.json', 'apiforgovermentapp.sln', 'appsettings.json', 'csharp', 'appsettings.development.json']",
-"level": "info",
-"logger": "readmeai.__main__",
-"timestamp": "2025-04-15T09:57:20.882123Z",
-"filename": "__main__.py",
-"func_name": "log_repository_context",
-"lineno": 104
-}
-{
-"event": "Languages: {'sln': 1, 'csproj': 1, 'json': 3, 'cs': 13, 'http': 1}",
-"level": "info",
-"logger": "readmeai.__main__",
-"timestamp": "2025-04-15T09:57:20.882272Z",
-"filename": "__main__.py",
-"func_name": "log_repository_context",
-"lineno": 105
-}
-Traceback (most recent call last):
-File "/home/adminuser/venv/lib/python3.11/site-packages/readmeai/__main__.py", line 32, in error_handler
-yield
-File "/home/adminuser/venv/lib/python3.11/site-packages/readmeai/__main__.py", line 40, in readme_agent
-asyncio.run(readme_generator(config, output_file))
-File "/home/adminuser/.local/share/uv/python/cpython-3.11.10-linux-x86_64-gnu/lib/python3.11/asyncio/runners.py", line 190, in run
-return runner.run(main)
-^^^^^^^^^^^^^^^^
-File "/home/adminuser/.local/share/uv/python/cpython-3.11.10-linux-x86_64-gnu/lib/python3.11/asyncio/runners.py", line 118, in run
-return self._loop.run_until_complete(task)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-File "/home/adminuser/.local/share/uv/python/cpython-3.11.10-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
-return future.result()
-^^^^^^^^^^^^^^^
-File "/home/adminuser/venv/lib/python3.11/site-packages/readmeai/__main__.py", line 55, in readme_generator
-async with ModelFactory.get_backend(config, context).use_api() as llm:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-File "/home/adminuser/venv/lib/python3.11/site-packages/readmeai/models/factory.py", line 41, in get_backend
-return llm_service(config, context)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-File "/home/adminuser/venv/lib/python3.11/site-packages/readmeai/models/openai.py", line 31, in __init__
-self._model_settings()
-File "/home/adminuser/venv/lib/python3.11/site-packages/readmeai/models/openai.py", line 43, in _model_settings
-self.client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-File "/home/adminuser/venv/lib/python3.11/site-packages/openai/_client.py", line 105, in __init__
-raise OpenAIError(
-openai.OpenAIError: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
-The above exception was the direct cause of the following exception:
-Traceback (most recent call last):
-File "/home/adminuser/venv/bin/readmeai", line 8, in <module>
-sys.exit(main())
-^^^^^^
-File "/home/adminuser/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
-return self.main(*args, **kwargs)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-File "/home/adminuser/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
-rv = self.invoke(ctx)
-^^^^^^^^^^^^^^^^
-File "/home/adminuser/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
-return ctx.invoke(self.callback, **ctx.params)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-File "/home/adminuser/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
-return __callback(*args, **kwargs)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-File "/home/adminuser/venv/lib/python3.11/site-packages/readmeai/cli/main.py", line 90, in main
-readme_agent(config=config, output_file=output)
-File "/home/adminuser/venv/lib/python3.11/site-packages/readmeai/__main__.py", line 39, in readme_agent
-with error_handler():
-File "/home/adminuser/.local/share/uv/python/cpython-3.11.10-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
-self.gen.throw(typ, value, traceback)
-File "/home/adminuser/venv/lib/python3.11/site-packages/readmeai/__main__.py", line 34, in error_handler
-raise ReadmeGeneratorError(e) from e
-readmeai.errors.ReadmeGeneratorError: Error generating README: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+<div align="left">
+    <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" width="40%" align="left" style="margin-right: 15px"/>
+    <div style="display: inline-block;">
+        <h2 style="display: inline-block; vertical-align: middle; margin-top: 0;">APIFORGOVERMENTAPP</h2>
+        <p>
+	<em><code>❯ REPLACE-ME</code></em>
+</p>
+        <p>
+	<img src="https://img.shields.io/github/license/LevKosyk/ApiForGovermentApp?style=default&logo=opensourceinitiative&logoColor=white&color=a0d1e2" alt="license">
+	<img src="https://img.shields.io/github/last-commit/LevKosyk/ApiForGovermentApp?style=default&logo=git&logoColor=white&color=a0d1e2" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/LevKosyk/ApiForGovermentApp?style=default&color=a0d1e2" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/LevKosyk/ApiForGovermentApp?style=default&color=a0d1e2" alt="repo-language-count">
+</p>
+        <p><!-- default option, no dependency badges. -->
+</p>
+        <p>
+	<!-- default option, no dependency badges. -->
+</p>
+    </div>
+</div>
+<br clear="left"/>
+
+<details><summary>Table of Contents</summary>
+
+- [📍 Overview](#-overview)
+- [👾 Features](#-features)
+- [📁 Project Structure](#-project-structure)
+  - [📂 Project Index](#-project-index)
+- [🚀 Getting Started](#-getting-started)
+  - [☑️ Prerequisites](#-prerequisites)
+  - [⚙️ Installation](#-installation)
+  - [🤖 Usage](#🤖-usage)
+  - [🧪 Testing](#🧪-testing)
+- [📌 Project Roadmap](#-project-roadmap)
+- [🔰 Contributing](#-contributing)
+- [🎗 License](#-license)
+- [🙌 Acknowledgments](#-acknowledgments)
+
+</details>
+<hr>
+
+## 📍 Overview
+
+<code>❯ REPLACE-ME</code>
+
+---
+
+## 👾 Features
+
+<code>❯ REPLACE-ME</code>
+
+---
+
+## 📁 Project Structure
+
+```sh
+└── ApiForGovermentApp/
+    ├── ApiForGovermentApp
+    │   ├── ApiForGovermentApp.csproj
+    │   ├── ApiForGovermentApp.http
+    │   ├── Controllers
+    │   ├── Data
+    │   ├── Migrations
+    │   ├── Models
+    │   ├── Program.cs
+    │   ├── Properties
+    │   ├── Services
+    │   ├── appsettings.Development.json
+    │   └── appsettings.json
+    ├── ApiForGovermentApp.sln
+    └── README.md
+```
+
+
+### 📂 Project Index
+<details open>
+	<summary><b><code>APIFORGOVERMENTAPP/</code></b></summary>
+	<details> <!-- __root__ Submodule -->
+		<summary><b>__root__</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp.sln'>ApiForGovermentApp.sln</a></b></td>
+				<td><code>❯ REPLACE-ME</code></td>
+			</tr>
+			</table>
+		</blockquote>
+	</details>
+	<details> <!-- ApiForGovermentApp Submodule -->
+		<summary><b>ApiForGovermentApp</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/ApiForGovermentApp.csproj'>ApiForGovermentApp.csproj</a></b></td>
+				<td><code>❯ REPLACE-ME</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/appsettings.Development.json'>appsettings.Development.json</a></b></td>
+				<td><code>❯ REPLACE-ME</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/appsettings.json'>appsettings.json</a></b></td>
+				<td><code>❯ REPLACE-ME</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/Program.cs'>Program.cs</a></b></td>
+				<td><code>❯ REPLACE-ME</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/ApiForGovermentApp.http'>ApiForGovermentApp.http</a></b></td>
+				<td><code>❯ REPLACE-ME</code></td>
+			</tr>
+			</table>
+			<details>
+				<summary><b>Controllers</b></summary>
+				<blockquote>
+					<table>
+					<tr>
+						<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/Controllers/UsersController.cs'>UsersController.cs</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					<tr>
+						<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/Controllers/PhotoController.cs'>PhotoController.cs</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					</table>
+				</blockquote>
+			</details>
+			<details>
+				<summary><b>Models</b></summary>
+				<blockquote>
+					<table>
+					<tr>
+						<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/Models/User.cs'>User.cs</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					<tr>
+						<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/Models/UserDto.cs'>UserDto.cs</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					<tr>
+						<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/Models/PhotoRequest.cs'>PhotoRequest.cs</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					<tr>
+						<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/Models/Photo.cs'>Photo.cs</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					</table>
+				</blockquote>
+			</details>
+			<details>
+				<summary><b>Migrations</b></summary>
+				<blockquote>
+					<table>
+					<tr>
+						<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/Migrations/ApiDbContextModelSnapshot.cs'>ApiDbContextModelSnapshot.cs</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					<tr>
+						<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/Migrations/20250411100731_InitialCreate.Designer.cs'>20250411100731_InitialCreate.Designer.cs</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					<tr>
+						<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/Migrations/20250411100731_InitialCreate.cs'>20250411100731_InitialCreate.cs</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					</table>
+				</blockquote>
+			</details>
+			<details>
+				<summary><b>Services</b></summary>
+				<blockquote>
+					<table>
+					<tr>
+						<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/Services/UserService.cs'>UserService.cs</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					<tr>
+						<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/Services/PhotoService.cs'>PhotoService.cs</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					</table>
+				</blockquote>
+			</details>
+			<details>
+				<summary><b>Properties</b></summary>
+				<blockquote>
+					<table>
+					<tr>
+						<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/Properties/launchSettings.json'>launchSettings.json</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					</table>
+				</blockquote>
+			</details>
+			<details>
+				<summary><b>Data</b></summary>
+				<blockquote>
+					<table>
+					<tr>
+						<td><b><a href='https://github.com/LevKosyk/ApiForGovermentApp/blob/master/ApiForGovermentApp/Data/ApiDbContext.cs'>ApiDbContext.cs</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					</table>
+				</blockquote>
+			</details>
+		</blockquote>
+	</details>
+</details>
+
+---
+## 🚀 Getting Started
+
+### ☑️ Prerequisites
+
+Before getting started with ApiForGovermentApp, ensure your runtime environment meets the following requirements:
+
+- **Programming Language:** CSharp
+- **Package Manager:** Nuget
+
+
+### ⚙️ Installation
+
+Install ApiForGovermentApp using one of the following methods:
+
+**Build from source:**
+
+1. Clone the ApiForGovermentApp repository:
+```sh
+❯ git clone https://github.com/LevKosyk/ApiForGovermentApp
+```
+
+2. Navigate to the project directory:
+```sh
+❯ cd ApiForGovermentApp
+```
+
+3. Install the project dependencies:
+
+
+**Using `nuget`** &nbsp; [<img align="center" src="https://img.shields.io/badge/C%23-239120.svg?style={badge_style}&logo=c-sharp&logoColor=white" />](https://docs.microsoft.com/en-us/dotnet/csharp/)
+
+```sh
+❯ dotnet restore
+```
+
+
+
+
+### 🤖 Usage
+Run ApiForGovermentApp using the following command:
+**Using `nuget`** &nbsp; [<img align="center" src="https://img.shields.io/badge/C%23-239120.svg?style={badge_style}&logo=c-sharp&logoColor=white" />](https://docs.microsoft.com/en-us/dotnet/csharp/)
+
+```sh
+❯ dotnet run
+```
+
+
+### 🧪 Testing
+Run the test suite using the following command:
+**Using `nuget`** &nbsp; [<img align="center" src="https://img.shields.io/badge/C%23-239120.svg?style={badge_style}&logo=c-sharp&logoColor=white" />](https://docs.microsoft.com/en-us/dotnet/csharp/)
+
+```sh
+❯ dotnet test
+```
+
+
+---
+## 📌 Project Roadmap
+
+- [X] **`Task 1`**: <strike>Implement feature one.</strike>
+- [ ] **`Task 2`**: Implement feature two.
+- [ ] **`Task 3`**: Implement feature three.
+
+---
+
+## 🔰 Contributing
+
+- **💬 [Join the Discussions](https://github.com/LevKosyk/ApiForGovermentApp/discussions)**: Share your insights, provide feedback, or ask questions.
+- **🐛 [Report Issues](https://github.com/LevKosyk/ApiForGovermentApp/issues)**: Submit bugs found or log feature requests for the `ApiForGovermentApp` project.
+- **💡 [Submit Pull Requests](https://github.com/LevKosyk/ApiForGovermentApp/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+
+<details closed>
+<summary>Contributing Guidelines</summary>
+
+1. **Fork the Repository**: Start by forking the project repository to your github account.
+2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
+   ```sh
+   git clone https://github.com/LevKosyk/ApiForGovermentApp
+   ```
+3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
+   ```sh
+   git checkout -b new-feature-x
+   ```
+4. **Make Your Changes**: Develop and test your changes locally.
+5. **Commit Your Changes**: Commit with a clear message describing your updates.
+   ```sh
+   git commit -m 'Implemented new feature x.'
+   ```
+6. **Push to github**: Push the changes to your forked repository.
+   ```sh
+   git push origin new-feature-x
+   ```
+7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
+8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
+</details>
+
+<details closed>
+<summary>Contributor Graph</summary>
+<br>
+<p align="left">
+   <a href="https://github.com{/LevKosyk/ApiForGovermentApp/}graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=LevKosyk/ApiForGovermentApp">
+   </a>
+</p>
+</details>
+
+---
+
+## 🎗 License
+
+This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+
+---
+
+## 🙌 Acknowledgments
+
+- List any resources, contributors, inspiration, etc. here.
+
+---

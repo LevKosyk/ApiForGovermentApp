@@ -40,6 +40,7 @@ namespace ApiForGovermentApp
 
             app.UseAuthorization();
             app.UseHttpsRedirection();
+
             app.MapControllers();
 
             app.Run();

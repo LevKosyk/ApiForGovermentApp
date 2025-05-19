@@ -3,17 +3,14 @@ using ApiForGovermentApp.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
 using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ApiForGovermentApp.Services
 {
     public interface IUserService
     {
         Task<User> GetUserById(int id);
-        Task<bool> AddUser(string login, string password);
+        Task<bool> AddUser(string login, string password, string name, string secondaryName);
         Task<User> FindUser(string login);
         Task<bool> FindUser(string login, string password);
         Task<List<User>> GetAllUsers();
@@ -34,33 +31,48 @@ namespace ApiForGovermentApp.Services
             return await _context.Users.FindAsync(id);
         }
 
-        public async Task<bool> AddUser(string login, string password)
+        public async Task<bool> AddUser(string login, string password, string name, string secondaryName)
         {
             try
             {
-                Console.WriteLine($"Adding user: {login}");
-                Guid id = Guid.NewGuid();
-                User user = new User { Id = id.ToString(), Login = login, Password = password };
+                if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
+                {
+                    return false;
+                }
+
+                var user = new User
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Login = login,
+                    Password = password,
+                    Name = name,
+                    SecondName = secondaryName
+                };
+
                 await _context.Users.AddAsync(user);
                 await _context.SaveChangesAsync();
-                Console.WriteLine("User added successfully.");
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine($"Error while adding user: {ex.Message}");
                 return false;
             }
         }
 
-
         public async Task<User> FindUser(string login)
         {
+            if (string.IsNullOrWhiteSpace(login))
+                return null;
+
             return await _context.Users.FirstOrDefaultAsync(u => u.Login == login);
         }
 
         public async Task<bool> FindUser(string login, string password)
         {
+            if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
+                return false;
+
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Login == login && u.Password == password);
             return user != null;
         }
@@ -72,6 +84,9 @@ namespace ApiForGovermentApp.Services
 
         public async Task<bool> UserExists(string login)
         {
+            if (string.IsNullOrWhiteSpace(login))
+                return false;
+
             return await _context.Users.AnyAsync(u => u.Login == login);
         }
     }

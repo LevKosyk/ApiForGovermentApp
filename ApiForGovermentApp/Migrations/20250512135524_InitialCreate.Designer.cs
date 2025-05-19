@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiForGovermentApp.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20250411100731_InitialCreate")]
+    [Migration("20250512135524_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -40,6 +40,18 @@ namespace ApiForGovermentApp.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("DetectedUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Latitude")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Longitude")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Situation")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -52,15 +64,9 @@ namespace ApiForGovermentApp.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("latitude")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("longetude")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("DetectedUserId");
 
                     b.HasIndex("UserId");
 
@@ -76,7 +82,15 @@ namespace ApiForGovermentApp.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SecondName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -87,11 +101,19 @@ namespace ApiForGovermentApp.Migrations
 
             modelBuilder.Entity("ApiForGovermentApp.Models.Photo", b =>
                 {
+                    b.HasOne("ApiForGovermentApp.Models.User", "DetectedUser")
+                        .WithMany()
+                        .HasForeignKey("DetectedUserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("ApiForGovermentApp.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("DetectedUser");
 
                     b.Navigation("User");
                 });

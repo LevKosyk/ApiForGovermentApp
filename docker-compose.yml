@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: ApiForGovermentApp/Dockerfile
     ports:
-      - "5000:80"
+      - "5138:5138"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings__DefaultConnection: "Server=db;Database=ApiDb;User ID=sa;Password=Your_password123;TrustServerCertificate=True;"

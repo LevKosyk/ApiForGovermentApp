@@ -16,8 +16,8 @@
 
 ## 🌐 Language Switch | Зміна мови
 
-* [🇺🇸 English](#-overview)
-* [🇺🇦 Українська](#-огляд-для-користувачів)
+- [🇺🇸 English](#-overview)
+- [🇺🇦 Українська](#-огляд-для-користувачів-ukrainian-guide)
 
 ---
 
@@ -71,61 +71,64 @@ ApiForGovermentApp/
 3. **Install Visual Studio**: [Download Visual Studio](https://visualstudio.microsoft.com)
 4. **(Optional)** Install VS Code: [Download VS Code](https://code.visualstudio.com/)
 
-### 📦 Setup Project
+# 📦 Setup Project
 
+
+### 1.Clone the repository
 ```sh
-# Clone the repository
-> git clone https://github.com/LevKosyk/ApiForGovermentApp
-
-# Navigate to project directory
-> cd ApiForGovermentApp
-
-# Update `appsettings.json`
-Replace `YOUR-SERVER-PATH` with your SQL Server instance path.
-
-# Apply database migrations
-> dotnet ef migrations add InitialCreate
-> dotnet ef database update
-
-# Run the application
-> dotnet run
+git clone https://github.com/LevKosyk/ApiForGovermentApp
 ```
+### 2. Navigate to project directory
+```sh
+cd ApiForGovermentApp
+```
+### 3. Update `appsettings.json`
+```sh
 
+Replace `YOUR-SERVER-PATH` with your SQL Server instance path.
+```
+### 4. Apply database migrations
+```sh
+dotnet ef migrations add InitialCreate
+```
+```sh
+dotnet ef database update
+```
+### 5. Run the application
+```sh
+dotnet run
+```
 ---
 
-## 🐳 Docker Installation
+## 🐳Run with Docker (Option 2)
 
-### ⚙️ Prerequisites
+## ⚙️ Prerequisites
 
 * Docker Desktop installed: [Get Docker](https://www.docker.com/products/docker-desktop)
 
-### 📄 Docker Setup
+## 📄 Docker Setup
 
+### 1. Clone the project
 ```sh
-# Clone the project
-> git clone https://github.com/LevKosyk/ApiForGovermentApp
-> cd ApiForGovermentApp
-
-# Build and run Docker containers
-> docker-compose up --build
+git clone https://github.com/LevKosyk/ApiForGovermentApp
+```
+```sh
+cd ApiForGovermentApp
 ```
 
-* This will start both the API and the local SQL Server instance using Docker Compose.
-* Make sure your `docker-compose.yml` defines services for both `web` (the API) and `db` (SQL Server).
-* Default SQL Server connection string is configured to:
+### 2.  Build and run Docker containers
 
-  ```json
-  "ConnectionStrings": {
-   	"DefaultConnection": "Server=YOUR-SERVER-PATH;Database=APIDB;Integrated Security=True;MultipleActiveResultSets=true;TrustServerCertificate=True"
-  }
-  ```
 * You can customize environment variables in `docker-compose.yml` for database credentials.
 
-🎥 Example video for Docker setup: [Docker Compose + SQL Server](https://www.youtube.com/watch?v=bzCn1jRgfGg)
+```sh
+docker-compose up --build
+```
+
+🎥 Example video for Docker setup: [Docker Compose + SQL Server](https://www.youtube.com/watch?v=ocMwNAt3-G0)
 
 ---
 
-## 🇺🇦 Огляд для користувачів (Ukrainian Guide)
+# 🇺🇦 Огляд для користувачів (Ukrainian Guide)
 
 ### ☑️ Передумови
 
@@ -134,7 +137,7 @@ Replace `YOUR-SERVER-PATH` with your SQL Server instance path.
 * **База даних:** SQL Server
 * **Інструмент БД:** SQL Server Management Studio
 
-### ⚙️ Встановлення (локально)
+## ⚙️ Встановлення (локально)
 
 1. Завантажте SQL Server: [SQL Server](https://www.microsoft.com/ru-ru/sql-server/sql-server-downloads)
 
@@ -144,50 +147,56 @@ Replace `YOUR-SERVER-PATH` with your SQL Server instance path.
    * 🎥 [Інструкція по SSMS](https://www.youtube.com/watch?v=f9bsZrL8fdc)
 3. Завантажте Visual Studio: [Visual Studio](https://visualstudio.microsoft.com)
 
-### 🔧 Налаштування проєкту
-
+### 1. Клонування репозиторію
 ```sh
-# Клонування репозиторію
-> git clone https://github.com/LevKosyk/ApiForGovermentApp
-
-# Перейдіть у директорію
-> cd ApiForGovermentApp
-
-# Замініть `YOUR-SERVER-PATH` в appsettings.json на шлях до вашого SQL Server
-
-# Застосуйте міграції
-> dotnet ef migrations add InitialCreate
-> dotnet ef database update
-
-# Запустіть застосунок
-> dotnet run
+git clone https://github.com/LevKosyk/ApiForGovermentApp
 ```
 
-### 🐳 Встановлення через Docker
-
+### 2. Перехід у директорію проєкту
 ```sh
-# Клонуйте репозиторій
-> git clone https://github.com/LevKosyk/ApiForGovermentApp
-> cd ApiForGovermentApp
+cd ApiForGovermentApp
+```
+### 3. 🔧 Оновіть appsettings.json
+```sh
+   "ConnectionStrings": {
+  "DefaultConnection": "Server=YOUR-SERVER-PATH;Database=YourDbName;Trusted_Connection=True;"
+}
 
-# Запуск через Docker
-> docker-compose up --build
+```
+#### Замініть YOUR-SERVER-PATH на шлях до вашого SQL Server.
+
+### 4. Застосуйте міграції
+```sh
+dotnet ef migrations add InitialCreate
+```
+```sh
+dotnet ef database update
 ```
 
-* Ця команда запустить одночасно API і SQL Server (локально через Docker).
-* Переконайтесь, що `docker-compose.yml` містить сервіс для `web` (API) та `db` (SQL Server).
-* За замовчуванням, підключення до бази даних виглядає так:
+### 5. Запустіть застосунок
+```sh
+dotnet run
+```
+## 🐳 Запуск через Docker
+### ⚙️ Необхідне
+Встановлений Docker Desktop
+###🔗 Завантажити Docker
 
-  ```json
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=db;Database=GovernmentAppDb;User=sa;Password=Your_password123;"
-  }
-  ```
-* Ви можете змінити налаштування в `docker-compose.yml` для облікових даних.
+##📄 Налаштування Docker
+### 1. Клонуйте репозиторій
+```sh
+git clone https://github.com/LevKosyk/ApiForGovermentApp
+```
 
-🎥 Відео по Docker + MSSQL: [Docker Compose та MSSQL](https://www.youtube.com/watch?v=bzCn1jRgfGg)
+```sh
+cd ApiForGovermentApp
+```
 
----
+### 2. Запустіть контейнер
+```sh
+docker-compose up --build
+```
+#### ⚙️ Ви можете змінити змінні середовища у docker-compose.yml для налаштування БД.
 
 ## 📞 Contact
 
